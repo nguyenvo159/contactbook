@@ -6,6 +6,7 @@ const cors = require("cors");
 const ApiError = require("./app/api-error");
 const app = express();
 
+
 app.use(cors());
 app.use(express.json());
 
