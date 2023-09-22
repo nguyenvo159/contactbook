@@ -15,8 +15,6 @@ app.get("/", (req, res) => {
 
 app.use("/api/contacts", contactsRouter);
 
-<<<<<<< HEAD
-=======
 app.use((req, res, next) => {
     // Code ở đây sẽ chạy khi không có route được định nghĩa nào
     // khớp với yêu cầu. Gọi next() để chuyển sang middleware xử lý lỗi
@@ -29,5 +27,4 @@ app.use((err, req, res, next) => {
     });
 });
 
->>>>>>> new-branch-name
 module.exports = app;
