@@ -76,6 +76,8 @@ exports.update = async (req, res, next) => {
 exports.delete = async (req, res, next) => {
     try {
         const contactService = new ContactService(MongoDB.client);
+
+        // Đã thay đổi chỗ này thành findById()
         const document = await contactService.findById(req.params.id);
         if (!document) {
             return next(new ApiError(404, "Contact not found"));
